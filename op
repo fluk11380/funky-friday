@@ -1,3 +1,27 @@
+game:GetService("StarterGui"):SetCore("SendNotification",{ 	Title = "IGNITE SV X",  	
+
+Text = "Maru Hub",
+
+})
+
+game:GetService("StarterGui"):SetCore("SendNotification",{ 	
+
+Title = "Wait 5 Sec....",  	
+
+Text = "Loading...",
+
+})
+
+wait(5)
+
+game:GetService("StarterGui"):SetCore("SendNotification",{ 	
+
+Title = "Load!!",  	
+
+Text = "EZ WIN",
+
+})
+
 local start = tick()
 local client = game:GetService('Players').LocalPlayer;
 local set_identity = (type(syn) == 'table' and syn.set_thread_identity) or setidentity or setthreadcontext
@@ -404,7 +428,7 @@ local ActivateUnlockables do
         local idx = table.find(framework.SongsWhitelist, client.UserId)
         if idx then return end
 
-        UI:Notify('Developer arrows have been unlocked!', 3)
+        UI:Notify('Developer arrows unlocked!', 3)
         table.insert(framework.SongsWhitelist, client.UserId)
     end
 end
@@ -685,7 +709,7 @@ Groups.Misc = Tabs.Miscellaneous:AddRightGroupbox('Miscellaneous')
     Groups.Misc:AddDivider()
     Groups.Misc:AddButton('Unload script', function() pcall(shared._unload) end)
     Groups.Misc:AddButton('Copy discord', function()
-        if pcall(setclipboard, "https://wally.cool/discord") then
+        if pcall(setclipboard, "https://discord.gg/8T9wpJRJYc") then
             UI:Notify('Successfully copied discord link to your clipboard!', 5)
         end
     end)
@@ -783,7 +807,7 @@ end
 
 UI:Notify(string.format('Loaded script in %.4f second(s)!', tick() - start), 3)
 
---Propertie--
+---Propertie
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local TextButton = Instance.new("TextButton")
@@ -842,4 +866,4 @@ Frame.Parent.Active = true
 Frame.Parent.Draggable = true
 
 
----end--
+---end
